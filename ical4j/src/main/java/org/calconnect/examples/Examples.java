@@ -27,7 +27,7 @@ public class Examples {
             (args.length == 0)) {
       /* List the examples */
   
-      pln("Parameters are nbothing for this list or one or");
+      pln("Parameters are none for this list or one or");
       pln("more of the following keywords:");
       
       for (final String s: examples.keySet()) {
@@ -47,7 +47,11 @@ public class Examples {
       
       pln("Example " + s);
       pln("");
-      pln(eg.getExample().toString());
+      
+      /* Use the ical4j CalendarOutputter class to fold the output lines
+         to a maximum length.
+       */
+      pln(Utils.calToString(eg.getExample()));
     }
   }
   
