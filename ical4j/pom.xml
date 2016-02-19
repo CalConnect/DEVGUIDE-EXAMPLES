@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.calconnect.examples</groupId>
+  <artifactId>Icalj-examples</artifactId>
+
+  <packaging>jar</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <properties>
+    <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
+    <maven.source.plugin.version>2.1.2</maven.source.plugin.version>
+  </properties>
+
+  <scm>
+      <connection>scm:git:git@github.com:CalConnect/DEVGUIDE-EXAMPLES</connection>
+      <developerConnection>scm:git:git@github.com:CalConnect/DEVGUIDE-EXAMPLES</developerConnection>
+      <url>https://github.com/CalConnect/DEVGUIDE-EXAMPLES</url>
+      <tag>HEAD</tag>
+  </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.mnode.ical4j</groupId>
+      <artifactId>ical4j</artifactId>
+      <version>1.0.7</version>
+    </dependency>
+  </dependencies>
+
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>2.4</version>
+            </extension>
+        </extensions>
+        <plugins>
+            <!-- Specify the compiler options and settings -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <showDeprecation>false</showDeprecation>
+                    <showWarnings>false</showWarnings>
+                    <!-- This for up-to-date annotation processing
+                    <annotationProcessors>
+                      <annotationProcessor>
+                        org.bedework.calfacade.annotations.BedeworkAp
+                      </annotationProcessor>
+                    </annotationProcessors>
+                    -->
+                    <compilerArgument>-proc:none</compilerArgument>
+                </configuration>
+            </plugin>
+            <!-- Produce source jars during the 'verify' phase -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven.source.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar</goal>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
+
