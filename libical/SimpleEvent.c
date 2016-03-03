@@ -1,4 +1,7 @@
-/* Example libical code to create Simple Event */
+/* Example libical code to create Simple Event
+ *
+ * To compile: cc -o SimpleEvent -lical SimpleEvent.c
+ */
 
 #include <libical/ical.h>
 
