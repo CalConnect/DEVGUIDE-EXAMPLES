@@ -32,7 +32,7 @@ public class SimpleEvent implements Example {
   }
 
   @Override
-  public Calendar getExample() {
+  public void runExample() {
     try {
       final TimeZone tz = Utils.getTimezone("America/New_York");
       
@@ -89,11 +89,16 @@ public class SimpleEvent implements Example {
 
       // Add the event and print
       cal.getComponents().add(event);
+
+      Utils.pline("Example " + getKey());
+      Utils.pline("");
       
-      return cal;
+      /* Use the ical4j CalendarOutputter class to fold the output lines
+         to a maximum length.
+       */
+      Utils.pline(Utils.calToString(cal));
     } catch (Throwable t) {
       t.printStackTrace();
-      return null;
     }
   }
 }

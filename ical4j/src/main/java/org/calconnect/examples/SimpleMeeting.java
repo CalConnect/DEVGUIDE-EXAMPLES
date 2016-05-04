@@ -36,7 +36,7 @@ public class SimpleMeeting implements Example {
   }
 
   @Override
-  public Calendar getExample() {
+  public void runExample() {
     try {
       final TimeZone tz = Utils.getTimezone("America/New_York");
       
@@ -114,10 +114,15 @@ public class SimpleMeeting implements Example {
       // Add the event and print
       cal.getComponents().add(event);
       
-      return cal;
+      Utils.pline("Example " + getKey());
+      Utils.pline("");
+      
+      /* Use the ical4j CalendarOutputter class to fold the output lines
+         to a maximum length.
+       */
+      Utils.pline(Utils.calToString(cal));
     } catch (Throwable t) {
       t.printStackTrace();
-      return null;
     }
   }
 }

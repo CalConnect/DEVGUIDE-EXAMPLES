@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+PRODID:-//ABC Corporation/NONSGML iCal4j 1.0//EN
+CALSCALE:GREGORIAN
+VERSION:2.0
+BEGIN:VEVENT
+DTSTAMP:20160504T175305Z
+DTSTART;TZID=America/New_York:20160514T130000
+SUMMARY:Simple event
+DURATION:PT1H
+UID:20160504T175305Z-uidGen@fe80:0:0:0:c8d8:72ff:fe94:1087%awdl0
+LOCATION:Mo's bar - back room
+DESCRIPTION:We'll continue with the unfinished business from last time\,\
+ nin particular:\nCan names start wih a number?\nWhat if they are all num
+ eric?\nReuse of names - is it valid\nI remind the attendees we have spen
+ t 3 months on these subjects. We need closure!!!
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20160504T175311Z
+DTSTART;TZID=America/New_York:20160514T130000
+SUMMARY:Simple Meeting
+DURATION:PT1H
+UID:20160504T175311Z-uidGen@fe80:0:0:0:c8d8:72ff:fe94:1087%awdl0
+ATTENDEE;ROLE=REQ-PARTICIPANT;CN=Person 1:mailto:person1@example.com
+ATTENDEE;ROLE=OPT-PARTICIPANT;CN=Person 2:mailto:person2@example.com
+ORGANIZER;CN=Person 1:mailto:person1@example.com
+LOCATION:Mo's bar - back room
+DESCRIPTION:We'll continue with the unfinished business from last time\,\
+ nin particular:\nCan names start wih a number?\nWhat if they are all num
+ eric?\nReuse of names - is it valid\nI remind the attendees we have spen
+ t 3 months on these subjects. We need closure!!!
+END:VEVENT
+END:VCALENDAR

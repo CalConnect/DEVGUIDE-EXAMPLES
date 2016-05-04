@@ -16,6 +16,7 @@ public class Examples {
   static {
     register(new SimpleEvent());
     register(new SimpleMeeting());
+    register(new ParseIcs());
   }
   
   private static void register(final Example eg) {
@@ -27,11 +28,11 @@ public class Examples {
             (args.length == 0)) {
       /* List the examples */
   
-      pln("Parameters are none for this list or one or");
-      pln("more of the following keywords:");
+      Utils.pline("Parameters are none for this list or one or");
+      Utils.pline("more of the following keywords:");
       
       for (final String s: examples.keySet()) {
-        pln(s + "\t" + examples.get(s).getTitle());
+        Utils.pline(s + "\t" + examples.get(s).getTitle());
       }
       
       return;
@@ -41,21 +42,15 @@ public class Examples {
       final Example eg = examples.get(s);
       
       if (eg == null) {
-        pln("No example with key " + s);
+        Utils.pline("No example with key " + s);
         continue;
       }
       
-      pln("Example " + s);
-      pln("");
+      Utils.pline("Example " + s);
+      Utils.pline("");
       
-      /* Use the ical4j CalendarOutputter class to fold the output lines
-         to a maximum length.
-       */
-      pln(Utils.calToString(eg.getExample()));
+      eg.runExample();
     }
-  }
-  
-  private static void pln(String msg) {
-    System.out.println(msg);
+
   }
 }

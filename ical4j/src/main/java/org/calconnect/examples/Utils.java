@@ -57,4 +57,8 @@ public class Utils {
     
     return sw.toString();
   }
+
+  public static void pline(String msg) {
+    System.out.println(msg);
+  }
 }
