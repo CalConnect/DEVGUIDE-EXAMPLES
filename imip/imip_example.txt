@@ -1,0 +1,85 @@
+Delivered-To: daniel@example.com
+Received: by 10.100.155.155 with SMTP id t009rrm444ddd;
+        Wed, 20 Apr 2016 01:25:15 -0800 (PST)
+X-Received: by 10.100.155.156 with SMTP id 1000rrr444ttt;
+        Wed, 20 Apr 2016 01:25:15 -0800 (PST)
+Return-Path: <thomas@example.com>
+Received: from mx.example.com (example.com. [155.155.155.205])
+        by mx.example.com with ESMTPS id m44dd67.100.2016.04.20.03.99.44
+        for <daniel@example.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 20 Apr 2016 01:25:15 -0800 (PST)
+Received-SPF: pass (example.com: domain of thomas@example.com designates 155.155.155.205 as permitted sender) client-ip=155.155.155.205;
+Authentication-Results: mx.example.com;
+       dkim=pass header.i=@example.com;
+       spf=pass (example.com: domain of thomas@example.com designates 155.155.155.205 as permitted sender) smtp.mailfrom=thomas@example.com
+DKIM-Signature: v=1; a=rsa-sha256; d=example.net; s=brisbane;
+     c=relaxed/simple; q=dns/txt; l=1234; t=1117574938; x=1118006938;
+     h=from:to:subject:date:keywords:keywords;
+     bh=MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=;
+     b=dzdVyOfAKCdLXdJOc9G2q8LoXSlEniSbav+yuU4zGeeruD00lszZ
+              VoG4ZHRNiYzR
+Received: from [10.100.155.155] by examplecom-mailserver (via HTTP); Wed, 20 Apr 2016 10:25:14 +0100
+MIME-Version: 1.0
+Message-Id: <39483984938493dsds43434@examplecom-mailserver>
+From: Thomas <thomas@example.com>
+To: daniel@example.com
+Subject: Invitation: Lunchtime meeting at Wed, 12/08/2016, 12:00PM - 1:00PM (UTC+02:00)
+Content-Type: multipart/mixed; boundary="----=_Part_3484775_1421744232.1481189114838"
+Date: Wed, 20 Apr 2016 10:25:14 +0100 (CET)
+Auto-Submitted: auto-generated
+
+
+------=_Part_126231934_533363089.1481123184385
+Content-Type: multipart/alternative;
+	boundary="----=_Part_126231933_503261042.1481123184385"
+
+------=_Part_126231933_503261042.1481123184385
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+Invitation: Lunchtime meeting @ Wed, 20.04.2016, 12:00 PM - 00:01 PM (thomas@example.com)
+------=_Part_126231933_503261042.1481123184385
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Invitation Mail</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+		<span>Invitation: Lunchtime meeting</span>
+	</body>
+</html>
+
+------=_Part_126231933_503261042.1481123184385
+Content-Type: text/calendar; charset="UTF-8"; method=REQUEST
+Content-Transfer-Encoding: 7bit
+
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ABC Corporation//NONSGML My Product//EN
+BEGIN:VEVENT
+SUMMARY:Lunchtime meeting
+UID:ff808181-1fd7389e-011f-d7389ef9-00000003
+DTSTART;TZID=America/New_York:20160420T120000
+DURATION:PT1H
+END:VEVENT
+END:VCALENDAR
+
+------=_Part_126231933_503261042.1481123184385--
+
+------=_Part_126231934_533363089.1481123184385
+Content-Type: application/ics; charset="UTF-8"; method=REQUEST;
+	name="Invitation.ics"
+Content-Disposition: attachment; filename="Invitation.ics"
+Content-Transfer-Encoding: 7bit
+Content-Class: urn:content-classes:calendarmessage
+
+QkVHSU46VkNBTEVOREFSDQpWRVJTSU9OOjIuMA0KUFJPRElEOi0vL0FCQyBDb3Jwb3JhdGlvbi8vTk9OU0dNTCBNeSBQcm9kdWN0Ly9FTg0KQkVHSU46VkVWRU5UDQpTVU1NQVJZOkx1bmNodGltZSBtZWV0aW5nDQpVSUQ6ZmY4MDgxODEtMWZkNzM4OWUtMDExZi1kNzM4OWVmOS0wMDAwMDAwMw0KRFRTVEFSVDtUWklEPUFtZXJpY2EvTmV3X1lvcms6MjAxNjA0MjBUMTIwMDAwDQpEVVJBVElPTjpQVDFIDQpFTkQ6VkVWRU5UDQpFTkQ6VkNBTEVOREFS
+
+------=_Part_126231934_533363089.1481123184385--
