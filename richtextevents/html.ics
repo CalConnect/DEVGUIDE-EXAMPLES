@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+SOURCE;VALUE=URI:http://calendar.example.com/event_with_html.ics
+BEGIN:VEVENT
+UID: 2371c2d9-a136-43b0-bba3-f6ab249ad46e
+SUMMARY:What a nice present: 🎁
+DTSTART;TZID=America/New_York:20190221T170000
+DTEND;TZID=America/New_York:20190221T180000
+LOCATION:Germany
+DESCRIPTION:<html><body><h1>Title</h1><p><ul><li><b>first</b> Row
+  </li><li><i>second</i> Row</li></ul></p></body></html>
+END:VEVENT
+END:VCALENDAR
