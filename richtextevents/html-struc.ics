@@ -3,8 +3,8 @@ SOURCE;VALUE=URI:http://calendar.example.com/event_with_html.ics
 BEGIN:VEVENT
 UID: 2371c2d9-a136-43b0-bba3-f6ab249ad46e
 SUMMARY:What a nice present: 🎁
-DTSTART;TZID=America/New_York:20190229T170000
-DTEND;TZID=America/New_York:20190229T180000
+DTSTART;TZID=America/New_York:20190301T170000
+DTEND;TZID=America/New_York:20190301T180000
 LOCATION:Germany
 DESCRIPTION:Title\nfirst Row\nsecond Row
 STYLED-DESCRIPTION:<html><body><h1>Title</h1><p><ul><li><b>first</b> Row
